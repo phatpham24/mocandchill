@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng – MocAndChill</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🍵</div>
+        Moc&<span>Chill</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="blog.html">Blog</a>
+        <a href="shop.html">Cửa hàng</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-cart" style="color:var(--primary)">
+          🛒 <span class="cart-badge" data-count="0"></span>
+        </a>
+      </div>
+      <div class="mobile-toggle" onclick="this.closest('.navbar').querySelector('.nav-links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>🛒 Giỏ Hàng</h1>
+      <p>Kiểm tra lại sản phẩm trước khi đặt hàng nhé!</p>
+    </div>
+  </section>
+
+  <!-- Cart Content -->
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span class="separator">/</span>
+        <a href="shop.html">Cửa hàng</a>
+        <span class="separator">/</span>
+        <span>Giỏ hàng</span>
+      </div>
+
+      <div class="cart-layout">
+        <div class="cart-items" id="cartItems">
+          <!-- Cart items rendered by JS -->
+        </div>
+        <div class="cart-summary" id="cartSummary">
+          <!-- Summary rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended -->
+  <section class="section" style="background:var(--cream)">
+    <div class="container">
+      <div class="section-header">
+        <h2>Có thể bạn cũng thích</h2>
+        <p>Những sản phẩm phổ biến mà bạn không nên bỏ lỡ</p>
+        <div class="leaf-divider">🌿</div>
+      </div>
+      <div class="products-grid" id="recommendedProducts"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">🍵</div>
+            Moc&<span>Chill</span>
+          </a>
+          <p>Nền tảng kết nối giới trẻ với lối sống thảo mộc, y học cổ truyền.</p>
+          <div class="footer-social">
+            <a href="#">📘</a>
+            <a href="#">📷</a>
+            <a href="#">🎵</a>
+            <a href="#">📺</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <a href="shop.html">Trà thảo mộc</a>
+          <a href="shop.html">Set quà tặng</a>
+          <a href="shop.html">Dụng cụ pha trà</a>
+        </div>
+        <div class="footer-col">
+          <h4>Về chúng tôi</h4>
+          <a href="#">Câu chuyện</a>
+          <a href="blog.html">Blog</a>
+          <a href="#">Liên hệ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Vận chuyển</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 MocAndChill. All rights reserved.</span>
+        <span>Made with 🍵 & ❤️</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Render recommended products
+      const grid = document.getElementById('recommendedProducts');
+      if (grid) {
+        const cartItems = Cart.getItems();
+        const cartIds = cartItems.map(i => i.id);
+        const recommended = PRODUCTS.filter(p => !cartIds.includes(p.id)).slice(0, 4);
+        grid.innerHTML = recommended.map(p => createProductCard(p)).join('');
+        
+        grid.querySelectorAll('.product-card').forEach(card => {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', (e) => {
+            if (e.target.closest('.quick-actions') || e.target.closest('.add-to-cart-btn')) return;
+            window.location.href = `product-detail.html?id=${card.dataset.id}`;
+          });
+        });
+        
+        initScrollAnimations();
+      }
+    });
+  </script>
+</body>
+</html>

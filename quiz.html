@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Gợi Ý Trà – MocAndChill</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>">
+</head>
+<body style="background: linear-gradient(180deg, var(--cream) 0%, var(--bg) 100%)">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🍵</div>
+        Moc&<span>Chill</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="blog.html">Blog</a>
+        <a href="shop.html">Cửa hàng</a>
+        <a href="quiz.html" class="active">Quiz</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-cart">
+          🛒 <span class="cart-badge" data-count="0"></span>
+        </a>
+      </div>
+      <div class="mobile-toggle" onclick="this.closest('.navbar').querySelector('.nav-links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Quiz Container -->
+  <div class="quiz-container">
+    <div style="text-align:center; margin-bottom:40px">
+      <h1 style="font-family:var(--font-heading); font-size:2.5rem; color:var(--primary-dark); margin-bottom:8px">
+        🧪 Tìm Trà Phù Hợp Với Bạn
+      </h1>
+      <p style="color:var(--text-light); font-size:1.05rem">
+        Trả lời 4 câu hỏi nhanh để nhận gợi ý sản phẩm được cá nhân hóa
+      </p>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="quiz-progress">
+      <div class="progress-step active"></div>
+      <div class="progress-step"></div>
+      <div class="progress-step"></div>
+      <div class="progress-step"></div>
+    </div>
+
+    <!-- Quiz Steps -->
+    <div id="quizSteps"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none; padding:0">
+        <span>© 2026 MocAndChill. All rights reserved.</span>
+        <span>Made with 🍵 & ❤️</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

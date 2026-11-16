@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MocAndChill – Thảo mộc cho giới trẻ</title>
+  <meta name="description" content="Nền tảng kết nối và chia sẻ lối sống thảo mộc, y học cổ truyền cho giới trẻ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🍵</div>
+        Moc&<span>Chill</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Trang chủ</a>
+        <a href="blog.html">Blog</a>
+        <a href="shop.html">Cửa hàng</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-cart">
+          🛒 <span class="cart-badge" data-count="0"></span>
+        </a>
+        <a href="quiz.html" class="btn btn-primary btn-sm">Làm Quiz ✨</a>
+      </div>
+      <div class="mobile-toggle" onclick="this.closest('.navbar').querySelector('.nav-links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">🌿 Thiên nhiên • Lành mạnh • Hiện đại</div>
+        <h1>
+          Sống xanh,<br>
+          Sống <span class="highlight">chill</span><br>
+          cùng thảo mộc
+        </h1>
+        <p>
+          MocAndChill mang đến trải nghiệm thảo mộc hiện đại, kết nối giới trẻ với y học cổ truyền 
+          qua những sản phẩm trà thảo mộc tự nhiên, blog kiến thức và cộng đồng sống xanh.
+        </p>
+        <div class="hero-buttons">
+          <a href="shop.html" class="btn btn-primary">🛍 Khám phá Shop</a>
+          <a href="quiz.html" class="btn btn-secondary">🧪 Tìm trà phù hợp</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <h3>50+</h3>
+            <p>Sản phẩm thảo mộc</p>
+          </div>
+          <div class="hero-stat">
+            <h3>10K+</h3>
+            <p>Khách hàng yêu thích</p>
+          </div>
+          <div class="hero-stat">
+            <h3>100%</h3>
+            <p>Tự nhiên, an toàn</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-main">🍵</div>
+          <div class="floating-card">
+            <div class="card-icon green">🌿</div>
+            <div class="card-text">
+              <h4>100% Organic</h4>
+              <p>Thảo mộc tự nhiên</p>
+            </div>
+          </div>
+          <div class="floating-card">
+            <div class="card-icon orange">⭐</div>
+            <div class="card-text">
+              <h4>4.9 / 5.0</h4>
+              <p>Đánh giá tích cực</p>
+            </div>
+          </div>
+          <div class="floating-card">
+            <div class="card-icon purple">🚚</div>
+            <div class="card-text">
+              <h4>Giao nhanh</h4>
+              <p>Free ship từ 300k</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Khám Phá Danh Mục</h2>
+        <p>Tìm kiếm sản phẩm thảo mộc phù hợp với nhu cầu của bạn</p>
+        <div class="leaf-divider">🍃</div>
+      </div>
+      <div class="categories-grid">
+        <a href="shop.html" class="category-card fade-in">
+          <div class="cat-icon">🍵</div>
+          <h3>Trà Thư Giãn</h3>
+          <p>Giảm stress, cải thiện giấc ngủ</p>
+        </a>
+        <a href="shop.html" class="category-card fade-in">
+          <div class="cat-icon">⚡</div>
+          <h3>Trà Tăng Lực</h3>
+          <p>Năng lượng tự nhiên cho cả ngày</p>
+        </a>
+        <a href="shop.html" class="category-card fade-in">
+          <div class="cat-icon">🧹</div>
+          <h3>Trà Thanh Lọc</h3>
+          <p>Detox, mát gan, giải độc</p>
+        </a>
+        <a href="shop.html" class="category-card fade-in">
+          <div class="cat-icon">🎁</div>
+          <h3>Set Quà Tặng</h3>
+          <p>Combo tiết kiệm, quà ý nghĩa</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section" style="background: var(--cream)">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sản Phẩm Nổi Bật</h2>
+        <p>Những sản phẩm được yêu thích nhất tại MocAndChill</p>
+        <div class="leaf-divider">🌿</div>
+      </div>
+      <div class="products-grid" id="featuredProducts"></div>
+      <div style="text-align: center; margin-top: 40px">
+        <a href="shop.html" class="btn btn-secondary">Xem tất cả sản phẩm →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Teaser -->
+  <section class="quiz-teaser section">
+    <div class="container">
+      <div class="quiz-teaser-content">
+        <h2>Hôm nay bạn<br>cảm thấy thế nào? 🤔</h2>
+        <p>
+          Chỉ mất 1 phút để làm bài quiz nhỏ, MocAndChill sẽ gợi ý loại trà thảo mộc 
+          phù hợp nhất với tâm trạng và nhu cầu sức khỏe hiện tại của bạn.
+        </p>
+        <a href="quiz.html" class="btn btn-accent">🧪 Bắt đầu Quiz ngay</a>
+      </div>
+      <div class="quiz-preview">
+        <h3>✨ Preview Quiz</h3>
+        <a href="quiz.html" class="quiz-option">
+          <span class="option-emoji">😰</span>
+          <span class="option-text">Căng thẳng, muốn thư giãn</span>
+        </a>
+        <a href="quiz.html" class="quiz-option">
+          <span class="option-emoji">😴</span>
+          <span class="option-text">Mệt mỏi, thiếu năng lượng</span>
+        </a>
+        <a href="quiz.html" class="quiz-option">
+          <span class="option-emoji">🤢</span>
+          <span class="option-text">Đầy bụng, khó tiêu</span>
+        </a>
+        <a href="quiz.html" class="quiz-option">
+          <span class="option-emoji">😌</span>
+          <span class="option-text">Muốn chill, tận hưởng</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Blog & Magazine</h2>
+        <p>Kiến thức thảo mộc, mẹo sức khỏe và lối sống xanh</p>
+        <div class="leaf-divider">📝</div>
+      </div>
+      <div class="blog-grid" id="blogGrid"></div>
+      <div style="text-align: center; margin-top: 40px">
+        <a href="blog.html" class="btn btn-secondary">Đọc thêm bài viết →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter section">
+    <div class="container">
+      <h2>🌿 Nhận tin từ MocAndChill</h2>
+      <p>Đăng ký để nhận những bài viết mới nhất, khuyến mãi và tips sức khỏe mỗi tuần!</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('🎉 Đăng ký thành công! Cảm ơn bạn.'); this.reset()">
+        <input type="email" placeholder="Email của bạn..." required>
+        <button type="submit" class="btn btn-primary">Đăng ký</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">🍵</div>
+            Moc&<span>Chill</span>
+          </a>
+          <p>Nền tảng kết nối giới trẻ với lối sống thảo mộc, y học cổ truyền. Sống xanh, sống chill.</p>
+          <div class="footer-social">
+            <a href="#">📘</a>
+            <a href="#">📷</a>
+            <a href="#">🎵</a>
+            <a href="#">📺</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <a href="shop.html">Trà thảo mộc</a>
+          <a href="shop.html">Set quà tặng</a>
+          <a href="shop.html">Dụng cụ pha trà</a>
+          <a href="shop.html">Nguyên liệu</a>
+        </div>
+        <div class="footer-col">
+          <h4>Về chúng tôi</h4>
+          <a href="#">Câu chuyện</a>
+          <a href="blog.html">Blog</a>
+          <a href="#">Liên hệ</a>
+          <a href="#">Tuyển dụng</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Vận chuyển</a>
+          <a href="#">FAQ</a>
+          <a href="#">Điều khoản</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 MocAndChill. All rights reserved.</span>
+        <span>Made with 🍵 & ❤️</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Render featured products (first 4)
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('featuredProducts');
+      if (grid) {
+        grid.innerHTML = PRODUCTS.slice(0, 4).map(p => createProductCard(p)).join('');
+        // Add click-to-detail
+        grid.querySelectorAll('.product-card').forEach(card => {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', (e) => {
+            if (e.target.closest('.quick-actions') || e.target.closest('.add-to-cart-btn')) return;
+            window.location.href = `product-detail.html?id=${card.dataset.id}`;
+          });
+        });
+      }
+
+      // Render blog posts (first 3)
+      const blogGrid = document.getElementById('blogGrid');
+      if (blogGrid) {
+        blogGrid.innerHTML = BLOG_POSTS.slice(0, 3).map(p => createBlogCard(p)).join('');
+      }
+
+      initScrollAnimations();
+    });
+  </script>
+</body>
+</html>
